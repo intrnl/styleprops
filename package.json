@@ -1,0 +1,27 @@
+{
+	"name": "styleprops",
+	"description": "CSS custom properties concatenation helper",
+	"version": "0.1.0",
+	"license": "MIT",
+	"sideEffects": false,
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "types/index.d.ts",
+	"files": [
+		"dist/",
+		"types/",
+		"README.md"
+	],
+	"author": {
+		"name": "intrnl",
+		"email": "intrnl28+node@gmail.com",
+		"url": "https://intr.now.sh"
+	},
+	"scripts": {
+		"build": "rollup -c",
+		"prepublishOnly": "pnpm run build"
+	},
+	"devDependencies": {
+		"rollup": "^2.23.0"
+	}
+}
