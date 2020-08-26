@@ -1,7 +1,7 @@
 {
 	"name": "@intrnl/styleprops",
 	"description": "CSS custom properties concatenation helper",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"license": "MIT",
 	"author": "intrnl",
 	"repository": {
