@@ -3,25 +3,31 @@
 	"description": "CSS custom properties concatenation helper",
 	"version": "0.1.0",
 	"license": "MIT",
-	"sideEffects": false,
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
+	"author": "intrnl",
+	"repository": {
+		"url": "https://github.com/intrnl/styleprops"
+	},
+	"source": "lib/index.ts",
+	"main": "dist/styleprops.js",
+	"module": "dist/styleprops.mjs",
 	"types": "types/index.d.ts",
+	"sideEffects": false,
 	"files": [
 		"dist/",
 		"types/",
 		"README.md"
 	],
-	"author": {
-		"name": "intrnl",
-		"email": "intrnl28+node@gmail.com",
-		"url": "https://intr.now.sh"
-	},
 	"scripts": {
-		"build": "rollup -c",
+		"build": "pnpm run build:lib & pnpm run build:types",
+		"build:lib": "rollup -c",
+		"build:types": "tsc",
 		"prepublishOnly": "pnpm run build"
 	},
 	"devDependencies": {
-		"rollup": "^2.23.0"
+		"rollup": "^2.26.5",
+		"rollup-plugin-esbuild": "^2.4.2",
+		"esbuild": "^0.6.27",
+		"@rollup/plugin-commonjs": "^15.0.0",
+		"@rollup/plugin-node-resolve": "^9.0.0"
 	}
 }
