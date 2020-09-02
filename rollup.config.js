@@ -16,7 +16,7 @@ let config = {
 		commonjs({ include: 'node_modules/**' }),
 		esbuild({
 			watch: !!process.env.ROLLUP_WATCH,
-			target: 'es2020',
+			target: 'es2019',
 			include: '**/*.{js,jsx,ts,tsx}',
 		}),
 	],
